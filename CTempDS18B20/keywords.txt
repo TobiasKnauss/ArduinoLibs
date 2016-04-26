@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For CTempDS18B20
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+CTempDS18B20	KEYWORD1
+EnumResult	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+Init		KEYWORD2
+Rese		KEYWORD2
+ResetComm	KEYWORD2
+ReadTemp	KEYWORD2
+DeviceSearch	KEYWORD2
+SetTempResolution	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################

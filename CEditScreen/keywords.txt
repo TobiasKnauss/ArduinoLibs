@@ -1,0 +1,41 @@
+#######################################
+# Syntax Coloring Map For CEditScreen
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+CEditScreen	KEYWORD1
+EnumDataType	KEYWORD1
+EnumAction	KEYWORD1
+BOOL	KEYWORD1
+BYTE	KEYWORD1
+INT	KEYWORD1
+UINT	KEYWORD1
+LONG	KEYWORD1
+ULONG	KEYWORD1
+FLOAT	KEYWORD1
+DOUBLE	KEYWORD1
+BYTES	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+Show	KEYWORD2
+Update	KEYWORD2
+IsDataExist	KEYWORD2
+IsDataChanged	KEYWORD2
+IsEditActive	KEYWORD2
+ResetDataChanged	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+EDITDISABLED	LITERAL1
