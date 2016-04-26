@@ -1,4 +1,4 @@
-#define DEBUG_CDoubleOutput
+//#define DEBUG_CDoubleOutput
 
 #include "CDoubleOutput.h"
 
@@ -32,7 +32,7 @@ void CDoubleOutput::Write (bool i_bStateA,
     i_bStateB = LOW;
 
 #ifdef DEBUG_CDoubleOutput
-  Serial << F("CDoubleOutput::Write() A=") << i_bStateA << F("B=") << i_bStateB << endl;
+  Serial << F("CDoubleOutput::Write() A=") << i_bStateA << F(" B=") << i_bStateB << endl;
 #endif
 
   if (i_bOnlyIfNew

@@ -18,11 +18,11 @@
 //                              Command MUST BE followed by writing 3 bytes. All data MUST be written before next reset, or the data may be corrupted!
 //  READ SCRATCHPAD   [0xBE] : Read scratchpad data: 9 bytes: TempLSB, TempMSB, TH, TL, Config, 3x reserved, CRC.
 //                              Command is followed by reading 9 bytes. A reset can be sent before all bytes are read.
-//  COPY SCRATCHPAD   [0x48] : Copy scratchpad to EEPROM. 
+//  COPY SCRATCHPAD   [0x48] : Copy scratchpad to EEPROM.
 //  RECALL E2         [0xB8] : Copy EEPROM to scratchpad (re-load EEPROM data).
 //                              Command can be followed by ReadBit to detect the conversion state (0=InProgress, 1=Done).
 //  READ POWER SUPPLY [0xB4] : Read power-supply mode. 0=parasite, 1=external.
-//                              Command is followed by reading 1 bit. 
+//                              Command is followed by reading 1 bit.
 //
 // Memory map:
 //  Byte 00: Temperature LSB
@@ -72,7 +72,7 @@ public:
     CmdSaveScratchpad   = 0x48,
     CmdLoadScratchpad   = 0xB8,
   };
-  
+
   //--------------------------------------
   enum EnumAction
   {
@@ -92,7 +92,7 @@ public:
   // description: initialize the class by reading the sensor config.
   //----------------------------------------------------------------------------
   EnumResult Init ();
-  
+
   //----------------------------------------------------------------------------
   // Reset
   // ResetComm
@@ -102,7 +102,7 @@ public:
   //----------------------------------------------------------------------------
   EnumResult Reset ();
   EnumResult ResetComm ();
-  
+
   //----------------------------------------------------------------------------
   // ReadTemp
   // description: Read the temperature value from the sensor.
@@ -130,7 +130,7 @@ public:
   static EnumResult DeviceSearch (OneWire* i_poOneWire,
                                   byte     o_aabyDevAddr[][8],
                                   byte&    o_byDeviceCount);
-  
+
 private:
   OneWire*      m_poOneWire;
   byte          m_abyDeviceAddress[8];

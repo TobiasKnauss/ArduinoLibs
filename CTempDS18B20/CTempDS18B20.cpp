@@ -11,7 +11,7 @@ CTempDS18B20::CTempDS18B20 (OneWire*    i_poOneWire,
 {
   if (!i_poOneWire)
   { o_enResult = EnumResult::Error_ValueInvalid; return;}
-  
+
   m_poOneWire = i_poOneWire;
   memcpy (m_abyDeviceAddress, i_abyDevAddr, sizeof(m_abyDeviceAddress));
 #ifdef DEBUG_CTempDS18B20
@@ -31,7 +31,7 @@ CTempDS18B20::EnumResult CTempDS18B20::Init ()
 {
   EnumResult enResult = ResetComm ();
   if (enResult != EnumResult::SUCCESS) return enResult;
-  
+
   m_poOneWire->select (m_abyDeviceAddress);
   m_poOneWire->write (EnumCmd::CmdReadScratchpad);
   byte abyData[9];
@@ -70,10 +70,10 @@ CTempDS18B20::EnumResult CTempDS18B20::Reset ()
 CTempDS18B20::EnumResult CTempDS18B20::ResetComm ()
 {
   if (!m_poOneWire) return EnumResult::Error_ObjectNotInitialized;
-  
+
   byte byResult = m_poOneWire->reset();
   if (!byResult) return EnumResult::Error_NoDevicePresent;
-  
+
   return EnumResult::SUCCESS;
 }
 
@@ -85,7 +85,7 @@ CTempDS18B20::EnumResult CTempDS18B20::ReadTemp (bool   i_bWait,
 {
   if (!m_poOneWire || !m_bInit) return EnumResult::Error_ObjectNotInitialized;
   EnumResult enResult = EnumResult::InProgress;
-  
+
   if (m_enAction != EnumAction::ActReadTemp
   ||  m_byStep <= 0
   ||  i_bWait)
@@ -167,10 +167,10 @@ CTempDS18B20::EnumResult CTempDS18B20::ReadTemp (bool   i_bWait,
 CTempDS18B20::EnumResult CTempDS18B20::SetTempResolution (int i_iResolution)
 {
   if (i_iResolution < 1 || i_iResolution > 4) return EnumResult::Error_ValueOutOfRange;
-  
+
   return EnumResult::Error_OperationFailed; // writing value to device is not implemented.
   m_byTempMultiplier = 1 << i_iResolution;
-  
+
   return EnumResult::SUCCESS;
 }
 
@@ -203,6 +203,6 @@ CTempDS18B20::EnumResult CTempDS18B20::DeviceSearch (OneWire* i_poOneWire,
   }
   while (bFound);
   o_byDeviceCount = byDevice;
-  
+
   return EnumResult::SUCCESS;
 }

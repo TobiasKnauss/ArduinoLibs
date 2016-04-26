@@ -1,4 +1,4 @@
-#define DEBUG_COutputPWM
+//#define DEBUG_COutputPWM
 
 #include "COutputPWM.h"
 

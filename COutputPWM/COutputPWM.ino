@@ -10,7 +10,7 @@ void setup()
 
 byte m_byValue = 0;
 
-void loop() 
+void loop()
 {
   m_oPumpe.Write ();
 

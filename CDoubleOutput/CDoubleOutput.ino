@@ -13,7 +13,7 @@ void setup()
 bool m_bKey = false;
 unsigned long lLoop = 0;
 
-void loop() 
+void loop()
 {
   bool bKey1 = digitalRead(5);
   bool bKey2 = digitalRead(6);
